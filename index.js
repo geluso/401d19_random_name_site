@@ -1,6 +1,13 @@
-#!/usr/bin/env node
-'use strict';
+var express = require('express');
+var randomPerson = require('./lib/random-generator');
+var app = express();
 
-let randomGenerator = require('./lib/random-generator');
+app.get('/', (req, res) => {
+  var name = randomPerson.randomName();
+  res.send(name);
+});
 
-randomGenerator.loadMemory();
+var port = 3000;
+app.listen(port, () => {
+  console.log('http://localhost:' + port);
+});
