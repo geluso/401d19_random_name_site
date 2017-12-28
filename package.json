@@ -20,7 +20,7 @@
     "node",
     "CLI"
   ],
-  "author": "Andrew Bloom",
+  "author": "Steve Geluso",
   "license": "MIT",
   "bin": {
     "callrandomstudent": "./index.js"
